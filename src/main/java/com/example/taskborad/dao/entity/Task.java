@@ -1,21 +1,20 @@
 package com.example.taskborad.dao.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import lombok.Getter;
-import lombok.Setter;
+import jakarta.persistence.*;
+import lombok.*;
 
 import java.io.Serializable;
 import java.util.Date;
 
 @Entity
-public abstract class Task implements Serializable {
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class Task implements Serializable {
 
     @Id
     @Getter
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     protected Long id;
 
     @Getter @Setter
@@ -28,8 +27,19 @@ public abstract class Task implements Serializable {
     protected Date dueDate;
 
     @Getter @Setter
-    protected int priority;
+    @Enumerated(EnumType.STRING)
+    protected Priority priority;
 
     @Getter @Setter
-    protected String status;
+    @Enumerated(EnumType.STRING)
+    protected Status status;
+
+
+    public enum Status {
+        PENDING, IN_PROGRESS, COMPLETED
+    }
+
+    public enum Priority {
+        LOW, MEDIUM, HIGH
+    }
 }

@@ -1,0 +1,52 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: hasnaa
+      changes:
+        - createTable:
+            tableName: task
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: title
+                  type: VARCHAR(255)
+              - column:
+                  name: description
+                  type: TEXT
+              - column:
+                  name: status
+                  type: VARCHAR(50)
+              - column:
+                  name: priority
+                  type: VARCHAR(50)
+              - column:
+                  name: due_date
+                  type: DATE
+
+  - changeSet:
+      id: 2
+      author: hasnaa,
+      changes:
+        - insert:
+            tableName: task
+            columns:
+              - column: { name: title, value: "Backend" }
+              - column: { name: description, value: "Use Spring boot to create a crud application"}
+              - column: { name: status, value: "COMPLETED" }
+              - column: { name: priority, value: "HIGH" }
+              - column: { name: due_date, valueDate: "2025-06-25" }
+
+        - insert:
+            tableName: task
+            columns:
+              - column: { name: title, value: "Frontend" }
+              - column: { name: description, value: "Use React.js to create a crud application" }
+              - column: { name: status, value: "COMPLETED" }
+              - column: { name: priority, value: "HIGH" }
+              - column: { name: due_date, valueDate: "2025-06-25" }
