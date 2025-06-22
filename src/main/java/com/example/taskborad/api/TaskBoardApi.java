@@ -8,13 +8,14 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("api")
+@RequestMapping("/api")
+@CrossOrigin(origins = "http://localhost:3000")
 public class TaskBoardApi {
 
     @Autowired
     TaskService taskService;
 
-    @PostMapping("/task")
+    @PostMapping("/add")
     public Task saveTask(@RequestBody Task task) {
         return taskService.saveTask(task);
     }
@@ -26,13 +27,13 @@ public class TaskBoardApi {
     }
 
 
-    @PutMapping("tasks/{id}")
+    @PutMapping("/update/{id}")
     public Task updateTask(@RequestBody Task task, @PathVariable Long id) {
         return taskService.updateTask(task, id);
     }
 
 
-    @DeleteMapping("tasks/{id}")
+    @DeleteMapping("/delete/{id}")
     public void deleteTask(@PathVariable Long id) {
         taskService.deleteTask(id);
     }
