@@ -32,7 +32,7 @@ This application allows users to manage **tasks** — similar to a simplified Ji
 └── README.md```<pre>
 
 
-🧪 **API Endpoints**
+## 🧪 **API Endpoints**
 
 | Method   | Endpoint           | Description                   |
 | -------- | ------------------ | ----------------------------- |
