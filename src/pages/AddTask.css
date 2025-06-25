@@ -1,0 +1,71 @@
+.form-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f7f7f7;
+}
+
+form {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  max-width: 90%;
+}
+
+form div {
+  margin-bottom: 1rem;
+}
+
+form label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+form input,
+form textarea,
+form select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+form button {
+  width: 100%;
+  padding: 0.6rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+.custom-toast {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #28a745;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  font-weight: 500;
+  z-index: 1000;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.custom-toast.error {
+  background-color: #dc3545;
+}
