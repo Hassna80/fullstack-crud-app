@@ -20,7 +20,7 @@ This application allows users to manage **tasks** — similar to a simplified Ji
 
 ## 📦 Project Structure
 
-fullstack-crud-app/
+<pre>```fullstack-crud-app/
 │
 ├── backend/ # Spring Boot app
 │ └── Dockerfile
@@ -29,7 +29,7 @@ fullstack-crud-app/
 │ └── Dockerfile
 │
 ├── docker-compose.yml # Compose configuration
-└── README.md
+└── README.md```<pre>
 
 
 🧪 **API Endpoints**
@@ -54,10 +54,9 @@ fullstack-crud-app/
 
 1. **Clone the repository:**
 
-```bash
-git clone https://github.com/your-username/fullstack-crud-app.git
+ `git clone https://github.com/your-username/fullstack-crud-app.git`
 
-`cd fullstack-crud-app`
+ `cd fullstack-crud-app`
 
 2. **build and run the app with docker compose**
 
